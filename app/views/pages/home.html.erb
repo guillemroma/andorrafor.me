@@ -1,2 +1,330 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="row">
+  <div class="col-2">
+  </div>
+  <div class="col-8 mt-5">
+    <div style="text-align: center;" class="mb-5">
+      <h4>Are you considering moving to <strong>Andorra</strong>?</h4>
+      <p>Let's check if that make sense 😉</p>
+    </div>
+    <em>The idea of the following questionare is to help you frame your decision on whether to relocate to Andorra (or not).</em><br>
+    <em>You will need to submit a score (from 0 to 10) to each of the questions to properly assess your decission.</em><br>
+
+    <div class="mt-5">
+      <%= simple_form_for(@survey_answers, url: survey_answers_path, method: :post) do |f| %>
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Money</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :money, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Distances</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :distances, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Safety</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :safety, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Cost of living</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :cost_of_living, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Services</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :services, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Health</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :health, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Pollution</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :pollution, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Community</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :community, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Transportation</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :transportation, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Language</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :language_barrier, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Location</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :valley, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Weather</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :weather, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Lifestyle</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :lifestyle, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="mb-2">
+            <strong>Children</strong>
+          </div>
+          <div class="mb-2">
+            <p>text</p>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <%= f.input :children, label: false, as: :range, input_html:{ min:"0", max:"10", oninput:"updateTextInput(this.value)"}%>
+            </div>
+            <div class="col-4">
+              <div style="text-align: center; margin-top: 0%">
+                <input type="text" id="textInput" value="" style="text-align: center; ">
+                <script>
+                  function updateTextInput(val) { document.getElementById('textInput').value=val;}
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Check Results 🤞", class: "btn btn-dark"  %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="col-2">
+  </div>
+</div>

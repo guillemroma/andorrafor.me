@@ -10,9 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2022_10_24_125528) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "survey_answers", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "money"
+    t.integer "distances"
+    t.integer "safety"
+    t.integer "cost_of_living"
+    t.integer "services"
+    t.integer "health"
+    t.integer "pollution"
+    t.integer "community"
+    t.integer "transportation"
+    t.integer "language_barrier"
+    t.integer "valley"
+    t.integer "weather"
+    t.integer "lifestyle"
+    t.integer "children"
+  end
 
 end
