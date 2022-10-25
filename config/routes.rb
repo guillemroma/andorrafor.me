@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :survey_answers, only: [:create]
 
   get '/ads.txt', to: 'pages#ads', as: :ads_txt
+  get '/privacy', to: 'pages#privacy', as: :privacy
 end

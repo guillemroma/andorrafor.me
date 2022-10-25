@@ -6,4 +6,7 @@ class PagesController < ApplicationController
   def ads
     render file: 'app/views/pages/ads.txt'
   end
+
+  def privacy
+  end
 end
